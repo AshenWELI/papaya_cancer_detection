@@ -1,6 +1,6 @@
 # Papaya Disease Classification using CNN
 
-This project aims to classify papaya diseases using a Convolutional Neural Network (CNN). It trains the model to recognize three types of diseases: Anthracnose, Phytophthora, and Ring Spot using image data.Before use this model install this classes <code>pip install tensorflow </code> and  <code>pip install opencv-python</code>. First you have to run papaya_cnn then run Model_recall.
+This project aims to classify papaya diseases using a Convolutional Neural Network (CNN). It trains the model to recognize three types of diseases: Anthracnose, Phytophthora, and Ring Spot using image data.
 
 ## Project Structure
 
@@ -13,9 +13,7 @@ This project aims to classify papaya diseases using a Convolutional Neural Netwo
 
 2. Install required dependencies:
 
-   <code>
-   pip install tensorflow keras opencv-python matplotlib
-   </code>
+   <code> pip install tensorflow keras opencv-python matplotlib </code>
 3. Ensure that the dataset is stored in the Input_data directory. Each disease type should have its folder, and images should be inside these folders.
 
 ## Dataset
@@ -36,7 +34,8 @@ Each folder in the dataset contains images of papaya leaves with one of these di
   
 2. Testing on a New Image: You can test the trained model on a new image using the following approach:
 
-   <code> image_path = 'Input_data/test_image.jpg'
+   ```python
+image_path = 'Input_data/test_image.jpg'
 image = cv2.imread(image_path)
 image = cv2.resize(image, (80, 80))  # Resize to match the input size
 image = image / 255.0  # Normalize
@@ -44,7 +43,7 @@ image = np.expand_dims(image, axis=0)  # Add batch dimension
 
 predictions = model.predict(image)
 print(predictions)  # The output will show the predicted class
-</code>
+```
 
 ## Model
 The Convolutional Neural Network (CNN) model used here has the following layers:
