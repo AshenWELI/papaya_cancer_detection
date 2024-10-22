@@ -34,7 +34,7 @@ Each folder in the dataset contains images of papaya leaves with one of these di
   
 2. Testing on a New Image: You can test the trained model on a new image using the following approach:
 
-   ```bash
+   `
 image_path = 'Input_data/test_image.jpg'
 image = cv2.imread(image_path)
 image = cv2.resize(image, (80, 80))  # Resize to match the input size
@@ -43,7 +43,7 @@ image = np.expand_dims(image, axis=0)  # Add batch dimension
 
 predictions = model.predict(image)
 print(predictions)  # The output will show the predicted class
-```
+`
 
 ## Model
 The Convolutional Neural Network (CNN) model used here has the following layers:
